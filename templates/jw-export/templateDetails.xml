@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	client="site">
+	<name>jw-export</name>
+	<creationDate>07/31/2012</creationDate>
+	<author>Jeld-Wen</author>
+	<authorUrl>http://wwww.jeld-wen.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<description>Jeld-Wen Export Joomla Template</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>sky-left</position>
+		<position>sky-right</position>
+		<position>roof-left</position>
+		<position>roof-right</position>
+		<position>top-left</position>
+		<position>top-right</position>
+		<position>main-title</position>
+		<position>main-top</position>
+		<position>main-left</position>
+		<position>main-mid</position>
+		<position>main-right</position>
+		<position>main-bottom</position>
+		<position>bottom-left</position>
+		<position>bottom-right</position>
+		<position>foot-left</position>
+		<position>foot-right</position>
+		<position>copyright</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_jw-export.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_jw-export.sys.ini</language>
+	</languages>
+
+</extension>

@@ -1,0 +1,284 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+.clear{
+	display: block;
+	content: ' ';
+	clear: both;
+}
+
+.contain{
+	width: 744px;
+	margin: auto;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.mid{
+	margin: auto;
+}
+
+.full{
+	width: 100%;
+}
+
+
+body{
+	font-family: Arial,Verdana,Geneva,Helvetica,sans-serif;
+	font-size: 12px;
+}
+
+p{
+	line-height: 16px;
+}
+
+a{
+	text-decoration: none;
+}
+
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: bold;
+}
+
+/*************************************************\
+	Sky
+\*************************************************/
+
+#sky{
+	border-top: 8px solid #487A93;
+	padding-top: 12px;
+
+}
+
+#sky-left a{
+	display: block;
+	background: url(../images/logo.gif);
+	width: 170px;
+	height: 55px;
+}
+
+#sky-right{
+	margin-top: 34px;
+}
+
+#sky-right li{
+	float: left;
+}
+
+#sky-right li a{
+	display: block;
+	font-size: 12px;
+	line-height: 12px;
+	color: #5D99B3;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	position: relative;
+	top: -1px;
+}
+
+#sky-right a:before{
+	margin-right: 24px;
+	content: '[';
+	color: #fff;
+}
+
+#sky-right li a:after{
+	margin-left: 24px;
+	content: ']';
+	color: #fff;
+}
+
+#sky-right a:hover{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#sky-right a:hover:before{
+	margin-right: 24px;
+	content: '[';
+	color: #5D99B3;
+}
+
+#sky-right li a:hover:after{
+	margin-left: 24px;
+	content: ']';
+	color: #5D99B3;
+}
+
+.item101{
+	display: none;
+}
+
+
+/*************************************************\
+	Roof
+\*************************************************/
+
+#roof{
+	background: #DBE4E8;
+	height: 25px;
+	margin-bottom: 8px;
+}
+
+#roof .contain{
+	background: #fff;
+	width: 760px;
+}
+
+#roof-mid{
+	background: #5D99B3;
+	height: 25px;
+	margin: 0 8px;
+}
+
+/*************************************************\
+	Title
+\*************************************************/
+
+#main-title{
+	padding: 14px;
+	background: #857C75;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	display: inline-block;
+	border-right: 8px solid #fff;
+	border-bottom: 8px solid #fff;
+}
+
+#main-title:after{
+	background: #EBE7DE;
+	height: 68px;
+	width: 100%;
+	display: block;
+	content: ' ';
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+/*************************************************\
+	Main
+\*************************************************/
+
+#main .contain{
+	position: relative;
+}
+
+#main-mid{
+	position: relative;
+	min-height: 400px;
+}
+
+.item-page{
+	margin: 0 15px;
+}
+
+
+/*************************************************\
+	Sidebar
+\*************************************************/
+
+#main-right{
+	border-left: 8px solid #fff;
+}
+
+#main-left{
+	border-right: 8px solid #fff;
+}
+
+#main-right img{
+	padding-bottom: 8px;
+	border-bottom: 43px solid #BBAFA9;
+}
+
+#main-right .home img{
+	border-bottom: 0;
+	padding-bottom: 0;
+	height: 183px;
+}
+
+#main-right .home img:after{
+}
+
+#main-right .slogan{
+	height: 43px;
+	line-height: 43px;
+	background: #EBE7DE;
+	text-align: center;
+	word-spacing: 2px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 1px #c9c4b9;
+	color: #444;
+}
+
+#main-right .reliability{
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px #f4f0e8;
+	position: relative;
+	top: 1px;
+	margin-right: 2px;
+}
+
+#main-right em{
+	font-family: times;
+}
+
+#main-right .trademark{
+	font-size: 6px;
+	position: relative;
+	top: -6px;
+	left: -6px;
+}
+
+/*************************************************\
+	Bottom
+\*************************************************/
+
+#bottom{
+	height: 33px;
+	background: #015480;
+}
+
+#bottom-right{
+	background: url(../images/foot-logo.gif);
+	height: 33px;
+	width: 266px;
+}
+
+/*************************************************\
+	Foot
+\*************************************************/
+
+#foot{
+	margin-top: 4px;
+}
+
+#copyright p{
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	margin-right: 10px;
+}
+
+#copyright p:before{
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	margin-right: 10px;
+	content: '|';
+}
