@@ -989,6 +989,13 @@ abstract class JModelAdmin extends JModelForm
 				$isNew = false;
 			}
 
+			// Load optional fields so they get bound when present
+			$result = $dispatcher->trigger('onContentPrepareData', array($this->option . '.' . $this->name, &$table));
+			if (in_array(false, $result, true)) {
+				$this->setError($dispatcher->getError());
+				return false;
+			}
+
 			// Bind the data.
 			if (!$table->bind($data))
 			{

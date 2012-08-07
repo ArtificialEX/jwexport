@@ -119,6 +119,13 @@ class ContentModelForm extends ContentModelArticle
 			$value->articletext .= '<hr id="system-readmore" />'.$value->fulltext;
 		}
 
+		// Get the dispatcher and load the content plugins.
+		$dispatcher	= JDispatcher::getInstance();
+		JPluginHelper::importPlugin('content');
+
+		// Trigger the data preparation event.
+		$results = $dispatcher->trigger('onContentPrepareData', array('com_content.article', $value));
+
 		return $value;
 	}
 

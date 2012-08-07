@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Jeld-Wen Editor Help</name>
+	<author>Jeld-Wen</author>
+	<creationDate>8-6-2012</creationDate>
+	<copyright>(C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>socialmedia@jeld-wen.com</authorEmail>
+	<authorUrl>www.jeld-wen.com</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_EDITOR_HELP_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<folder>rating</folder>
+		<filename plugin="editor_help">editor_help.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="ratingclass_sfx"
+					type="text"
+					label="PLG_EDITOR_HELP_ITEM_FIELD_RATING_CLASS_LABEL"
+					description="PLG_EDITOR_HELP_ITEM_FIELD_RATING_CLASS_DESC"
+					/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

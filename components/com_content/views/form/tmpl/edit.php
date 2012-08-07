@@ -204,13 +204,38 @@ endif;
 		<?php echo $this->form->getLabel('metakey'); ?>
 		<?php echo $this->form->getInput('metakey'); ?>
 		</div>
-
-		<input type="hidden" name="task" value="" />
-		<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
-		<?php if($this->params->get('enable_category', 0) == 1) :?>
-		<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1);?>"/>
-		<?php endif;?>
-		<?php echo JHtml::_( 'form.token' ); ?>
 	</fieldset>
+
+<?php
+	// Get the form fieldsets.
+	$fieldsets = $this->form->getFieldsets();
+	foreach ($fieldsets as $fieldset) :
+		if (in_array($fieldset->name, array('basic', 'editorConfig', 'basic-limited', 'attribs'))) :
+			// this set has already been displayed
+			continue;
+		endif;
+?>
+	<fieldset>
+		<legend><?php echo JText::_($fieldset->label); ?></legend>
+		<?php foreach($this->form->getFieldset($fieldset->name) as $field): ?>
+		<div class="formelm-area">
+			<?php if ($field->hidden): ?>
+				<?php echo $field->input; ?>
+			<?php else: ?>
+				<?php echo $field->label; ?>
+				<?php echo $field->input; ?>
+			<?php endif; ?>
+		</div>
+		<?php endforeach; ?>
+	</fieldset>
+<?php endforeach; ?>
+
+	<input type="hidden" name="task" value="" />
+	<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
+	<?php if($this->params->get('enable_category', 0) == 1) :?>
+	<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1);?>"/>
+	<?php endif;?>
+	<?php echo JHtml::_( 'form.token' ); ?>
+
 </form>
 </div>

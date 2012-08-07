@@ -67,7 +67,7 @@ strong{
 }
 
 #sky-right{
-	margin-top: 34px;
+	margin-top: 38px;
 }
 
 #sky-right li{
@@ -145,18 +145,21 @@ strong{
 \*************************************************/
 
 #main-title{
-	padding: 14px;
+	padding: 14px 20px;
 	background: #857C75;
 	color: #fff;
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 1px;
-	display: inline-block;
+	display: inline;
 	border-right: 8px solid #fff;
 	border-bottom: 8px solid #fff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
 }
 
-#main-title:after{
+#main-title-border{
 	background: #EBE7DE;
 	height: 68px;
 	width: 100%;
@@ -179,12 +182,30 @@ strong{
 #main-mid{
 	position: relative;
 	min-height: 400px;
+	top: 84px;
 }
+
+/*************************************************\
+	Articles
+\*************************************************/
 
 .item-page{
-	margin: 0 15px;
+	margin: 0 8px;
 }
 
+.item-page ul li{
+	line-height: 16px;
+}
+
+.item-page ul li a{
+	color: #36c;
+	padding-left: 14px;
+	background: url(http://jeld-wenexport.com/coralsprings/_images/arrow.gif) left 4px no-repeat;
+}
+
+.item-page a:visited{
+	color: ##9E948D;
+}
 
 /*************************************************\
 	Sidebar
@@ -252,6 +273,7 @@ strong{
 #bottom{
 	height: 33px;
 	background: #015480;
+	margin-top: 104px;
 }
 
 #bottom-right{
@@ -281,4 +303,53 @@ strong{
 	line-height: 15px;
 	margin-right: 10px;
 	content: '|';
+}
+
+#foot-left .joomla-nav li{
+	float: left;
+}
+
+#foot-left .joomla-nav li a{
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	margin-right: 10px;
+	color: #36c;
+}
+
+#foot-left .joomla-nav li a:visited{
+	color: #9E948D;
+}
+
+#foot-left .joomla-nav li.item111 a:after{
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	margin-left: 10px;
+	content: '|';
+}
+
+/*************************************************\
+	Forms
+\*************************************************/
+
+form label{
+	line-height: 32px;
+}
+
+form input{
+	width: 240px;
+}
+
+form label.same{
+	width: 100px;
+	display: inline-block;
+}
+
+form label.next{
+	display: block;
+}
+
+form textarea{
+	width: 340px;
 }

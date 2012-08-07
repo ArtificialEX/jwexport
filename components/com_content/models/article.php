@@ -213,6 +213,13 @@ class ContentModelArticle extends JModelItem
 					}
 				}
 
+				// Get the dispatcher and load the content plugins.
+				$dispatcher	= JDispatcher::getInstance();
+				JPluginHelper::importPlugin('content');
+
+				// Trigger the data preparation event.
+				$results = $dispatcher->trigger('onContentPrepareData', array('com_content.article', $data));
+
 				$this->_item[$pk] = $data;
 			}
 			catch (JException $e)

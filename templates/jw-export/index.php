@@ -128,6 +128,7 @@ $params		= $app->getParams();
 							<jdoc:include type="modules" name="main-title" style="none" />
 							<h1><?php echo $params->get('page_heading'); ?></h1>
 						</div>
+						<div id="main-title-border"></div>
 					<?php endif; ?>
 					
 					<div id="main-mid" class="mid">

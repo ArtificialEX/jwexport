@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="rating">
+		<fieldset name="rating" label="PLG_EDITOR_HELP_SLIDER_LABEL">
+		
+			<field
+				name="onecolright"
+				type="textarea"
+				id="onecolright"
+				description="PLG_EDITOR_HELP_FIELD_ONECOL_DESC"
+				label="PLG_EDITOR_HELP_FIELD_ONECOL_LABEL"
+				size="60"
+				readonly="true"
+				default="Code Here"
+			/>
+
+		</fieldset>
+	</fields>
+</form>

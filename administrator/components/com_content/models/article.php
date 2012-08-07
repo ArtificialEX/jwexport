@@ -277,7 +277,12 @@ class ContentModelArticle extends JModelAdmin
 			$registry->loadString($item->urls);
 			$item->urls = $registry->toArray();
 
+			// Get the dispatcher and load the content plugins.
+			$dispatcher	= JDispatcher::getInstance();
+			JPluginHelper::importPlugin('content');
 
+			// Trigger the data preparation event.
+			$results = $dispatcher->trigger('onContentPrepareData', array('com_content.article', $item));
 
 			$item->articletext = trim($item->fulltext) != '' ? $item->introtext . "<hr id=\"system-readmore\" />" . $item->fulltext : $item->introtext;
 		}
@@ -366,7 +371,6 @@ class ContentModelArticle extends JModelAdmin
 	{
 		// Check the session for previously entered form data.
 		$data = JFactory::getApplication()->getUserState('com_content.edit.article.data', array());
-
 		if (empty($data)) {
 			$data = $this->getItem();
 

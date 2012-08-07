@@ -229,6 +229,30 @@ endif;
 		<?php echo JHtml::_('sliders.panel', JText::_('JGLOBAL_FIELDSET_METADATA_OPTIONS'), 'meta-options'); ?>
 			<fieldset class="panelform">
 				<?php echo $this->loadTemplate('metadata'); ?>
+			</fieldset>
+		<?php
+			// Get the form fieldsets.
+			$fieldsets = $this->form->getFieldsets();
+			foreach ($fieldsets as $fieldset) :
+				if (in_array($fieldset->name, array('basic', 'editorConfig', 'basic-limited', 'attribs'))) :
+					// this set has already been displayed
+					continue;
+				endif;
+				echo JHtml::_('sliders.panel', JText::_($fieldset->label), $fieldset->name);
+		?>
+			<fieldset class="panelform">
+			<ul class="adminformlist">
+			<?php foreach($this->form->getFieldset($fieldset->name) as $field): ?>
+				<?php if ($field->hidden): ?>
+					<?php echo $field->input; ?>
+				<?php else: ?>
+					<li><?php echo $field->label; ?>
+					<?php echo $field->input; ?></li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+			</ul>
+			</fieldset>
+		<?php endforeach; ?>
 
 		<?php echo JHtml::_('sliders.end'); ?>
 	</div>

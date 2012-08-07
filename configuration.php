@@ -5,7 +5,7 @@ class JConfig {
 	public $display_offline_message = '1';
 	public $offline_image = '';
 	public $sitename = 'Jeld-Wen Export';
-	public $editor = 'tinymce';
+	public $editor = 'jckeditor';
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
